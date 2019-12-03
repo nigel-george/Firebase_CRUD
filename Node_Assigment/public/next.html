@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 9px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 2px -3px;
+    cursor: pointer;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+  
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+<script src="next.js"></script>
+
+</head>
+<body >
+
+<div class="container">
+    <div id="edit-div" style="visibility:hidden;">
+
+        <div class="container">
+            <form id="editform"  action="#" method="post" >
+              <lable id="edit-label" value="" hidden></lable>
+                <label for="edit-name"><b>Name</b></label>
+                <input type="text"  name="edit-name" id="edit-name" value="" required>
+            
+                <label for="edit-email"><b>Email</b></label>
+                <input type="email" value="" name="edit-email" id="edit-email" required>
+            
+                
+            
+                <label for="edit-mob"><b>Contact Number</b></label>
+                <input type="number" value="" name="edit-mob" id="edit-mob"  required>
+                <hr>
+                
+            
+                <button type="button" name="editme" id="editme" value="" onclick="editRecord(this.value);" class="button">EDIT</button>
+              </form>
+            </div>
+        
+        </div>
+  <div id="main-table">
+<table id="mytab">
+  <tr>
+    <th hidden>ID</th>
+    <th>Name</th>
+    <th>Contact</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+  </tr>
+  
+ 
+</table>
+ 
+
+<button class="button" onclick="location.href = 'index.html'">Back</button>
+</div>
+
+</div>
+</body>
+</html>
+
